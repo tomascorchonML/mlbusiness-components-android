@@ -33,13 +33,33 @@
             android:layout_marginBottom="@dimen/ui_1m"
             app:hasTriangle="true" />
 
+        <LinearLayout
+            android:id="@+id/discounts_item_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Cantidad de items a mostrar" />
+
+            <Spinner
+                android:id="@+id/item_quantity_selector_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
         <com.mercadolibre.android.mlbusinesscomponents.components.discount.MLBusinessDiscountBoxView
             android:id="@+id/discountView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintTop_toBottomOf="@id/discounts_item_selector"
             android:layout_gravity="center" />
 
         <com.mercadolibre.android.mlbusinesscomponents.components.common.downloadapp.MLBusinessDownloadAppView
